@@ -3,54 +3,119 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Takkun's HomePage</title>
+
+<title>TakkunMC | Home</title>
+
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<div id="announcement">
+ゲームサイトはこちらへ移動しました →
+<a href="https://example.com">ゲームサイト</a>
+<button onclick="closeAnnouncement()">✕</button>
+</div>
+
 <header>
-<h1>TakkunMCのホームページ</h1>
-<p>Welcome to my website</p>
-</header>
+
+<h1 class="logo">Takkun</h1>
 
 <nav>
 <a href="#about">About</a>
 <a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
+<a href="#links">Links</a>
 </nav>
 
-<section id="about">
-<h2>About</h2>
-<p>
-このサイトはTakkunMCのホームページです。
-</p>
+</header>
+
+<section class="hero">
+
+<h2>Welcome</h2>
+<p>Programming / Minecraft / Community</p>
+
+<a class="button" href="#projects">Projectsを見る</a>
+
 </section>
+
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<div class="card">
+<p>
+Minecraftサーバー運営やプログラミングをしています。  
+Mod / Plugin / Web制作などを開発しています。
+</p>
+</div>
+
+</section>
+
 
 <section id="projects">
+
 <h2>Projects</h2>
 
+<div class="grid">
+
 <div class="card">
-<h3>Minecraft Server</h3>
-<p>Natsuki Community Serverで運営しているサーバー。</p>
+<h3>Natsuki Community Server</h3>
+<p>Minecraftのコミュニティサーバー</p>
 </div>
 
 <div class="card">
-<h3>Plugins / Mods</h3>
-<p>マイクラJava版のプラグインやMODを開発しています。</p>
+<h3>Minecraft Plugins</h3>
+<p>Paper / Fabric 用プラグインやMOD</p>
+</div>
+
+<div class="card">
+<h3>Web Projects</h3>
+<p>ツールやWebアプリ制作</p>
+</div>
+
 </div>
 
 </section>
 
-<section id="contact">
-<h2>Contact</h2>
-<p>GitHub: <a href="https://github.com/Takkunlego0916">GitHub</a></p>
-<p>自己紹介: <a href="https://contact.takkunlego0916.f5.si">自己紹介</p>
+
+<section id="links">
+
+<h2>Links</h2>
+
+<div class="grid">
+
+<div class="card">
+<a href="https://github.com/Takkunlego0916">GitHub</a>
+</div>
+
+<div class="card">
+<a href="https://discord.gg/GznDJnyqZa">Discord</a>
+</div>
+
+</div>
+
 </section>
+
 
 <footer>
+
 <p>© 2026 Takkunlego0916</p>
+
 </footer>
+
+
+<div id="cookieBanner">
+
+<p>
+このサイトではCookieを使用しています。
+</p>
+
+<button onclick="acceptCookies()">同意する</button>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
