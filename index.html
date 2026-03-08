@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>TakkunMC | Home</title>
+<title>TakkunMC | HomePage</title>
 
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
+<div id="particles-js"></div>
+
 <div id="announcement">
 ゲームサイトはこちらへ移動しました →
-<a href="https://example.com">ゲームサイト</a>
+<a href="https://games.takkunlego0916.f5.si">ゲームサイト</a>
 <button onclick="closeAnnouncement()">✕</button>
 </div>
 
 <header>
 
-<h1 class="logo">Takkun</h1>
+<div class="logo">TakkunMC</div>
 
 <nav>
 <a href="#about">About</a>
@@ -29,49 +33,48 @@
 
 </header>
 
+
 <section class="hero">
 
-<h2>Welcome</h2>
-<p>Programming / Minecraft / Community</p>
+<h1 class="title">Welcome</h1>
+<p class="subtitle">Programming / Minecraft / Community</p>
 
-<a class="button" href="#projects">Projectsを見る</a>
+<a class="mainButton" href="#projects">Projects</a>
 
 </section>
 
 
-<section id="about">
+<section id="about" class="reveal">
 
-<h2>About Me</h2>
+<h2>About</h2>
 
-<div class="card">
-<p>
-Minecraftサーバー運営やプログラミングをしています。  
-Mod / Plugin / Web制作などを開発しています。
-</p>
+<div class="glass">
+Minecraftサーバー運営やプログラミングをしています。<br>
+Plugin / Mod / Web制作など。
 </div>
 
 </section>
 
 
-<section id="projects">
+<section id="projects" class="reveal">
 
 <h2>Projects</h2>
 
 <div class="grid">
 
-<div class="card">
-<h3>Natsuki Community Server</h3>
-<p>Minecraftのコミュニティサーバー</p>
+<div class="glass card">
+<h3>Minecraft Server</h3>
+<p>Natsuki Community Server</p>
 </div>
 
-<div class="card">
-<h3>Minecraft Plugins</h3>
-<p>Paper / Fabric 用プラグインやMOD</p>
+<div class="glass card">
+<h3>Plugins</h3>
+<p>Paper / Fabric plugins</p>
 </div>
 
-<div class="card">
-<h3>Web Projects</h3>
-<p>ツールやWebアプリ制作</p>
+<div class="glass card">
+<h3>Web Tools</h3>
+<p>便利なWebツール制作</p>
 </div>
 
 </div>
@@ -79,17 +82,17 @@ Mod / Plugin / Web制作などを開発しています。
 </section>
 
 
-<section id="links">
+<section id="links" class="reveal">
 
 <h2>Links</h2>
 
 <div class="grid">
 
-<div class="card">
+<div class="glass card">
 <a href="https://github.com/Takkunlego0916">GitHub</a>
 </div>
 
-<div class="card">
+<div class="glass card">
 <a href="https://discord.gg/GznDJnyqZa">Discord</a>
 </div>
 
@@ -107,14 +110,13 @@ Mod / Plugin / Web制作などを開発しています。
 
 <div id="cookieBanner">
 
-<p>
-このサイトではCookieを使用しています。
-</p>
-
+<p>このサイトではCookieを使用します。</p>
 <button onclick="acceptCookies()">同意する</button>
 
 </div>
 
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script src="script.js"></script>
 
 </body>
