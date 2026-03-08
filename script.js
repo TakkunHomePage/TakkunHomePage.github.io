@@ -87,3 +87,17 @@ document.getElementById("marketingCookie").checked=settings.marketing
 }
 
 })
+
+window.addEventListener("load",()=>{
+
+const loader=document.getElementById("loader")
+
+loader.classList.add("loaderFade")
+
+setTimeout(()=>{
+
+loader.style.display="none"
+
+},500)
+
+})
