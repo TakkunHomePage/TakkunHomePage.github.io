@@ -1,4 +1,3 @@
-
 particlesJS("particles-js",{
 particles:{
 number:{value:80},
@@ -46,5 +45,42 @@ r.classList.add("active")
 }
 
 })
+
+})
+
+function saveCookieSettings(){
+
+const analytics=document.getElementById("analyticsCookie").checked
+const marketing=document.getElementById("marketingCookie").checked
+
+localStorage.setItem("cookieSettings",JSON.stringify({
+analytics:analytics,
+marketing:marketing
+}))
+
+alert("Cookie設定を保存しました")
+
+}
+
+
+function resetCookieSettings(){
+
+localStorage.removeItem("cookieSettings")
+
+location.reload()
+
+}
+
+
+window.addEventListener("load",()=>{
+
+const settings=JSON.parse(localStorage.getItem("cookieSettings"))
+
+if(settings){
+
+document.getElementById("analyticsCookie").checked=settings.analytics
+document.getElementById("marketingCookie").checked=settings.marketing
+
+}
 
 })
