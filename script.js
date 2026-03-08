@@ -162,8 +162,8 @@ links:"Links",
 news:"News",
 news1_title:"Server Update",
 news1_text:"The Minecraft server was updated.",
-news2_title:"New Mod",
-news2_text:"A new Minecraft mod has been released."
+news2_title:"New Plugin",
+news2_text:"A new Minecraft plugin has been released."
 },
 
 ja:{
@@ -173,8 +173,8 @@ links:"リンク",
 news:"最新情報",
 news1_title:"サーバー更新",
 news1_text:"Minecraftサーバーを最新版に更新しました。",
-news2_title:"新しいMOD",
-news2_text:"新しいMinecraft MODを公開しました。"
+news2_title:"新しいプラグイン",
+news2_text:"新しいMinecraft Pluginを公開しました。"
 }
 
 }
