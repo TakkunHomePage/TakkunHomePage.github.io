@@ -134,3 +134,65 @@ const nav=document.getElementById("navMenu")
 nav.classList.toggle("active")
 
 }
+
+function toggleTheme(){
+
+document.body.classList.toggle("light")
+
+const theme=document.body.classList.contains("light")
+
+localStorage.setItem("theme",theme)
+
+}
+
+if(localStorage.getItem("theme")==="true"){
+
+document.body.classList.add("light")
+
+}
+
+let currentLang="ja"
+
+const translations={
+
+en:{
+about:"About",
+projects:"Projects",
+links:"Links",
+news:"News",
+news1_title:"Server Update",
+news1_text:"The Minecraft server was updated.",
+news2_title:"New Mod",
+news2_text:"A new Minecraft mod has been released."
+},
+
+ja:{
+about:"概要",
+projects:"プロジェクト",
+links:"リンク",
+news:"最新情報",
+news1_title:"サーバー更新",
+news1_text:"Minecraftサーバーを最新版に更新しました。",
+news2_title:"新しいMOD",
+news2_text:"新しいMinecraft MODを公開しました。"
+}
+
+}
+
+function toggleLanguage(){
+
+currentLang=currentLang==="ja" ? "en":"ja"
+
+document.querySelectorAll("[data-lang]").forEach(el=>{
+
+const key=el.getAttribute("data-lang")
+
+if(translations[currentLang][key]){
+
+el.textContent=translations[currentLang][key]
+
+}
+
+})
+
+}
