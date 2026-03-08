@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -39,11 +39,30 @@
 
 <div class="logo">TakkunMC</div>
 
-<nav>
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#links">Links</a>
+<nav id="navMenu">
+
+<a href="#about" data-lang="about">About</a>
+<a href="#projects" data-lang="projects">Projects</a>
+<a href="#links" data-lang="links">Links</a>
+<a href="#news" data-lang="news">News</a>
+
 </nav>
+
+<div class="headerControls">
+
+<button onclick="toggleLanguage()" title="Language">
+<i class="fa-solid fa-language"></i>
+</button>
+
+<button onclick="toggleTheme()" title="Theme">
+<i class="fa-solid fa-moon"></i>
+</button>
+
+<button class="menuButton" onclick="toggleMenu()">
+<i class="fa-solid fa-bars"></i>
+</button>
+
+</div>
 
 </header>
 
@@ -119,6 +138,32 @@ Plugin / Mod / Web制作など。
 <h3>Discord</h3>
 </div>
 </a>
+
+</div>
+
+</section>
+
+<section id="news" class="reveal">
+
+<h2>Latest News</h2>
+
+<div class="grid">
+
+<div class="glass card">
+<i class="fa-solid fa-server"></i>
+<h3 data-lang="news1_title">サーバー更新</h3>
+<p data-lang="news1_text">
+Minecraftサーバーを最新版に更新しました。
+</p>
+</div>
+
+<div class="glass card">
+<i class="fa-solid fa-code"></i>
+<h3 data-lang="news2_title">新しいMOD</h3>
+<p data-lang="news2_text">
+新しいMinecraft Pluginを公開しました。
+</p>
+</div>
 
 </div>
 
