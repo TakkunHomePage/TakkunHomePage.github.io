@@ -1,9 +1,19 @@
 body{
 
 margin:0;
-font-family:sans-serif;
-background:#0f172a;
+font-family:Arial, sans-serif;
 color:white;
+background:#0f172a;
+overflow-x:hidden;
+
+}
+
+#particles-js{
+
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
 
 }
 
@@ -13,7 +23,8 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 40px;
-background:#020617;
+background:rgba(0,0,0,0.3);
+backdrop-filter:blur(10px);
 
 }
 
@@ -34,36 +45,44 @@ color:white;
 
 .hero{
 
+height:80vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-padding:120px 20px;
-background:linear-gradient(135deg,#3b82f6,#9333ea);
 
 }
 
-.hero h2{
+.title{
 
-font-size:48px;
+font-size:64px;
 margin:0;
 
 }
 
-.button{
+.subtitle{
 
-display:inline-block;
+opacity:0.8;
+
+}
+
+.mainButton{
+
 margin-top:20px;
-padding:12px 24px;
-background:white;
-color:black;
+padding:12px 28px;
+background:linear-gradient(45deg,#3b82f6,#9333ea);
+border-radius:8px;
 text-decoration:none;
-border-radius:6px;
+color:white;
 
 }
 
 section{
 
-padding:60px 20px;
 max-width:1000px;
 margin:auto;
+padding:80px 20px;
 
 }
 
@@ -75,19 +94,31 @@ gap:20px;
 
 }
 
+.glass{
+
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+border-radius:12px;
+padding:25px;
+
+}
+
 .card{
 
-background:#1e293b;
-padding:25px;
-border-radius:10px;
+transition:0.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-6px);
 
 }
 
 footer{
 
 text-align:center;
-padding:30px;
-background:#020617;
+padding:40px;
 
 }
 
@@ -118,8 +149,17 @@ gap:20px;
 
 }
 
-#cookieBanner button{
+.reveal{
 
-padding:8px 16px;
+opacity:0;
+transform:translateY(30px);
+transition:1s;
+
+}
+
+.reveal.active{
+
+opacity:1;
+transform:translateY(0);
 
 }
