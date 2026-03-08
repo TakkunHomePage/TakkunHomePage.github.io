@@ -7,6 +7,9 @@ line_linked:{enable:true}
 }
 })
 
+function openCookieSettings(){
+    window.location.href = "cookie.html";
+}
 
 function acceptCookies(){
 
