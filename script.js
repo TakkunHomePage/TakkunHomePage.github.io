@@ -1,3 +1,8 @@
+const MIN_LOAD_TIME = 2500;
+const startTime = Date.now();
+
+if (typeof particlesJS !== "undefined") {
+
 particlesJS("particles-js",{
 particles:{
 number:{value:80},
@@ -7,30 +12,43 @@ line_linked:{enable:true}
 }
 })
 
+}
+
 function openCookieSettings(){
-    window.location.href = "cookie.html";
+window.location.href="cookie.html";
 }
 
 function acceptCookies(){
 
 localStorage.setItem("cookieAccepted","true")
-document.getElementById("cookieBanner").style.display="none"
+
+const banner=document.getElementById("cookieBanner")
+
+if(banner){
+banner.style.display="none"
+}
 
 }
 
 if(localStorage.getItem("cookieAccepted")){
 
-document.getElementById("cookieBanner").style.display="none"
+const banner=document.getElementById("cookieBanner")
 
+if(banner){
+banner.style.display="none"
 }
 
+}
 
 function closeAnnouncement(){
 
-document.getElementById("announcement").style.display="none"
+const a=document.getElementById("announcement")
 
+if(a){
+a.style.display="none"
 }
 
+}
 
 const reveals=document.querySelectorAll(".reveal")
 
@@ -53,8 +71,8 @@ r.classList.add("active")
 
 function saveCookieSettings(){
 
-const analytics=document.getElementById("analyticsCookie").checked
-const marketing=document.getElementById("marketingCookie").checked
+const analytics=document.getElementById("analyticsCookie")?.checked
+const marketing=document.getElementById("marketingCookie")?.checked
 
 localStorage.setItem("cookieSettings",JSON.stringify({
 analytics:analytics,
@@ -65,7 +83,6 @@ alert("Cookie設定を保存しました")
 
 }
 
-
 function resetCookieSettings(){
 
 localStorage.removeItem("cookieSettings")
@@ -74,30 +91,38 @@ location.reload()
 
 }
 
-
 window.addEventListener("load",()=>{
 
 const settings=JSON.parse(localStorage.getItem("cookieSettings"))
 
 if(settings){
 
-document.getElementById("analyticsCookie").checked=settings.analytics
-document.getElementById("marketingCookie").checked=settings.marketing
+const analytics=document.getElementById("analyticsCookie")
+const marketing=document.getElementById("marketingCookie")
+
+if(analytics) analytics.checked=settings.analytics
+if(marketing) marketing.checked=settings.marketing
 
 }
 
-})
-
-window.addEventListener("load",()=>{
 
 const loader=document.getElementById("loader")
+
+if(loader){
+
+const elapsed=Date.now()-startTime
+const remaining=MIN_LOAD_TIME-elapsed
+
+setTimeout(()=>{
 
 loader.classList.add("loaderFade")
 
 setTimeout(()=>{
-
 loader.style.display="none"
-
 },500)
+
+}, remaining>0 ? remaining : 0)
+
+}
 
 })
