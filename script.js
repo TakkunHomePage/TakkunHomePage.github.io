@@ -126,3 +126,11 @@ loader.style.display="none"
 }
 
 })
+
+function toggleMenu(){
+
+const nav=document.getElementById("navMenu")
+
+nav.classList.toggle("active")
+
+}
