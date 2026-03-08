@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cookie設定</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Takkun</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="cookie.html">Cookie設定</a>
+</nav>
+
+</header>
+
+<section class="cookiePage">
+
+<h1>Cookie設定</h1>
+
+<p>
+このサイトでは、サービス改善のためCookieを使用しています。
+以下から設定を変更できます。
+</p>
+
+<div class="glass cookieCard">
+
+<h3>必須Cookie</h3>
+
+<p>
+サイトの基本機能に必要なCookieです。  
+このCookieは無効にできません。
+</p>
+
+<label class="switch">
+<input type="checkbox" checked disabled>
+<span class="slider"></span>
+</label>
+
+</div>
+
+
+<div class="glass cookieCard">
+
+<h3>解析Cookie</h3>
+
+<p>
+アクセス解析などに使用されます。
+</p>
+
+<label class="switch">
+<input type="checkbox" id="analyticsCookie">
+<span class="slider"></span>
+</label>
+
+</div>
+
+
+<div class="glass cookieCard">
+
+<h3>マーケティングCookie</h3>
+
+<p>
+広告やトラッキングに使用されます。
+</p>
+
+<label class="switch">
+<input type="checkbox" id="marketingCookie">
+<span class="slider"></span>
+</label>
+
+</div>
+
+
+<div class="cookieButtons">
+
+<button class="mainButton" onclick="saveCookieSettings()">
+設定を保存
+</button>
+
+<button onclick="resetCookieSettings()">
+リセット
+</button>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
